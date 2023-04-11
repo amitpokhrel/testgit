@@ -1,0 +1,12 @@
+Typescript:
+is a language build on top of jS with the purpose of avoiding the pitfalls of js. does this by adding Type. Typescript is superset of Javascript.
+
+Type (in typescript): Static checking -> detect errors in code without running. does this pre-runtime. helps to find errors, only in development phase later compiled to JS.
+
+Install:
+npm install -g typescript
+and we have access to tsc -v
+Typescript playground: where you can use typescript without installing ts in local
+Compile Ts to JS: tsc <.ts filename>
+
+Syntax: let myVar: type = value

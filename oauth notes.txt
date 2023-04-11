@@ -1,0 +1,35 @@
+Password grant flow: present your credencials and get access token.
+Front channel vs back channel: 
+	front channel: through browser to be more specific using browser address bar to send information. it is required to insert user in between the negotiation (for user concent). otherwise only backchannel was enough.
+	back channel: client to server https connection (does not mean backend server) (post/get request but browser not involved)
+Overall Communication:
+	-> application tells auth server what it is trying to do (first package. and includes client id, what scope it is requesting etc). through front channel
+	-> auth server sends access token and redirects to the application.
+	
+
+Inplicit FLow -> uses only front channel. front channel for both the request it makes and to receive the access token.
+
+Authorization code flow:  
+	client id -> similar to client/application name
+	client secret -> client password. key to know it is actually the client it is telling.
+	authorization code -> short lived one time only use token given by auth server (through front channel) on exchange of which (using back channel) access token can be granted. This is done in order to prevent the transfer of access token through front channel. since the authorization code is being transferred via front channel, someone can steal it and get access token in exchange of it but this is where client secret comes into play. access token is granted only if auth code and client secret is presented via back channel. in scenarios where client cannot present client secret (eg, in SPA and mobile app), auth code with PKCE is used. And oauth server redirects to the redirect url after providing access token through back channel.
+	
+Confidencial app vs public app : apps that have the ability to be deployed with a client secret are confidencial app and other are public apps.
+
+oauth client -> client that will be getting and using access token
+
+Authorization code flow for web application:
+	-user clicks the login button.(I would like to use this app)
+	-generates random secret and hash it(is different for each request, PKCE)
+	-app includes this hash along with other things like client id, scope, redirect url etc while making request to oauth server
+	-oauth server asks user to login and confirm if they are trying to login to app-
+	-if the user says yes, the auth server redirects user back to the redirect url along with one time use authorization code. (happens through front channel)
+	- applicaion makes a back channel request to gain access token by exchanging the authorization code.
+	
+
+Client Credential flow:
+	machine to machine communication
+
+	
+	
+	
