@@ -1,0 +1,43 @@
+Core Java:
+- JDK, JRE and JVM explain
+- types of memory areas are allocated by JVM (Heap and Stack)
+- when does stack overflow occur/ when does out of memory occur how do you approach to fix the issue
+- various access specifiers in Java
+- explain polymorphysh with example/ what is run time polymorphysm
+- what is final variable, but i can add values to final array why?
+- exception handling/ throw vs throws/ finally block
+- what is string pool / what is immutable string
+- garbage collector/  How can an object be unreferenced
+- what is serialization
+
+
+Data Structure:
+- linked list vs array LIST
+- internal working of map / map that maintains insert ORDER
+- your favourite sort algorithm
+- binary search algorithm
+
+
+Programming questions:
+- reverse a number
+- remove duplicate elements from an ARRAY
+- second largest number in an array
+- shuffle an array
+- convert map to list of keys (stream test)
+- remove elements that starts with 'he' from an string array
+
+Advance Questions:
+-How would you deal with memory leaks in Java applications?
+- Is hppt stateful or stateless? Then how do servers maintain state of a user?
+- what is url rewriting?
+- Describe different ways of exception handling in the Spring MVC framework.
+- Define message-driven design and list its advantages?
+
+
+Spring Boot:
+- dependency injection
+- scope of beans
+- component scan
+- spring-boot-starter-parent
+- pring actuator
+-  @RestController and @Controller 
